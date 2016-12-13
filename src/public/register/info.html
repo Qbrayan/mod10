@@ -1,0 +1,26 @@
+
+<div class=container>
+  <div class="col-md-12" ng-if="!infoCtrl.saved()">
+    <a ui-sref="public.register">Not Signed Up Yet. Sign up Now!</a>
+  </div>
+<table width="100%" class="table" ng-if="infoCtrl.saved()">
+  <tr>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th>Photo</th>
+    <th>Description</th>
+  </tr>
+  <tr >
+    <td>{{infoCtrl.user.firstname}}</td>
+    <td>{{infoCtrl.user.lastname}}</td>
+    <td>{{infoCtrl.user.phone}}</td>
+    <td>{{infoCtrl.user.email}}</td>
+    <td>{{infoCtrl.menuItem.name}}</td>
+    <td><img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.menuItem.short_name}}.jpg" alt="{{infoCtrl.menuItem.name}}"></td>
+    <td>{{infoCtrl.menuItem.description}}</td>
+  </tr>
+</table>
+</div>
